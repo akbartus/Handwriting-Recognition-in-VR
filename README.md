@@ -1,1 +1,1 @@
-# A-Frame-Component-Handwriting-Recognition
+# Handwriting Recognition in VR
