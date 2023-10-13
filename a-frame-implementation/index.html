@@ -1,0 +1,29 @@
+<html>
+    <head>
+    <script src='https://aframe.io/releases/1.4.2/aframe.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="texture-painter-component.js"></script>  
+</head>
+    <body>
+        <a-scene>
+           <!-- Drawing Plane -->
+            <a-plane id="drawingArea" texture-painter position="0 1.5 -4" rotation="0 0 0" width="5" height="4"></a-plane>
+            <!-- Buttons -->
+            <a-entity id="recognize" class="clickable" position="-1.5 -0.5 -3" geometry="primitive: plane; height: 0.3"
+            text="value: Recognize; align: center; width: 3;" material="color: black"></a-entity>
+            <a-entity id="outputText" position="0 0.2 -3" geometry="primitive: plane; width: 3.6; height: 0.3"
+            text="value: Console; align: center; width: 3;" material="color: blue"></a-entity>
+            <a-entity id="erase" class="clickable" position="1.5 -0.5 -3" geometry="primitive: plane; height: 0.4;"
+            text="value: Erase; align: center; width: 3;" material="color: black"></a-entity>
+          
+            <a-sky color='#ECECEC'></a-sky>
+            <!-- Mouse/Laset Pointers -->
+            <a-entity cursor="rayOrigin: mouse" raycaster="objects: .clickable;"></a-entity>
+            <a-entity class="controller" laser-controls="hand: left" raycaster="objects: .clickable;" line="color: #000000">
+            </a-entity>
+            <a-entity class="controller" laser-controls="hand: right" raycaster="objects: .clickable;" line="color: #000000">
+            </a-entity>
+        </a-scene>
+        <script src="main.js"></script>
+    </body>
+</html>
