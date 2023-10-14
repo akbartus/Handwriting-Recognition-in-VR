@@ -1,3 +1,9 @@
+if (AFRAME.utils.device.isMobile() === true || !AFRAME.utils.device.checkHeadsetConnected() === true) {
+  document.querySelector("#drawingArea").setAttribute("class", "none");
+} else {
+  document.querySelector("#drawingArea").setAttribute("class", "clickable");
+}
+
 const wrapperDiv = document.createElement('div');
 wrapperDiv.id = 'wrapper';
 wrapperDiv.style.display = 'none';

@@ -8,7 +8,7 @@
     <body>
         <a-scene>
            <!-- Drawing Plane -->
-            <a-plane id="drawingArea" texture-painter position="0 1.5 -4" rotation="0 0 0" width="5" height="4"></a-plane>
+            <a-plane id="drawingArea" class="clickable" texture-painter position="0 1.5 -4" rotation="0 0 0" width="5" height="4"></a-plane>
             <!-- Buttons -->
             <a-entity id="recognize" class="clickable" position="-1.5 -0.5 -3" geometry="primitive: plane; height: 0.3"
             text="value: Recognize; align: center; width: 3;" material="color: black"></a-entity>
@@ -21,8 +21,6 @@
             <!-- Mouse/Laset Pointers -->
             <a-entity cursor="rayOrigin: mouse" raycaster="objects: .clickable;"></a-entity>
             <a-entity class="controller" laser-controls="hand: left" raycaster="objects: .clickable;" line="color: #000000">
-            </a-entity>
-            <a-entity class="controller" laser-controls="hand: right" raycaster="objects: .clickable;" line="color: #000000">
             </a-entity>
         </a-scene>
         <script src="main.js"></script>

@@ -23,40 +23,13 @@ AFRAME.registerComponent("texture-painter", {
     this.size = this.data.size;
     this.background = this.data.background;
 
-    this.el.sceneEl.addEventListener(
-      "camera-set-active",
-      this.cameraSetActive.bind(this)
-    );
-    this.el.sceneEl.addEventListener(
-      "mousemove",
-      this.onMouseMove.bind(this),
-      false
-    );
-    this.el.sceneEl.addEventListener(
-      "mouseup",
-      this.onMouseUp.bind(this),
-      false
-    );
-    this.el.sceneEl.addEventListener(
-      "mousedown",
-      this.onMouseDown.bind(this),
-      false
-    );
-    this.el.sceneEl.addEventListener(
-      "touchmove",
-      this.onTouchMove.bind(this),
-      false
-    );
-    this.el.sceneEl.addEventListener(
-      "touchend",
-      this.onTouchEnd.bind(this),
-      false
-    );
-    this.el.sceneEl.addEventListener(
-      "touchstart",
-      this.onTouchStart.bind(this),
-      false
-    );
+     this.el.sceneEl.addEventListener('camera-set-active', this.cameraSetActive.bind(this));
+           this.el.sceneEl.addEventListener('mousemove', this.onMouseMove.bind(this), false);
+        this.el.sceneEl.addEventListener('touchmove', this.onMouseMove.bind(this), false);
+        this.el.sceneEl.addEventListener('mouseup', this.onMouseUp.bind(this), false);
+        this.el.sceneEl.addEventListener('touchend', this.onMouseUp.bind(this), false);
+        this.el.sceneEl.addEventListener('mousedown', this.onMouseDown.bind(this), false);
+        this.el.sceneEl.addEventListener('touchstart', this.onMouseDown.bind(this), false);
 
     this.el.sceneEl.addEventListener("loaded", () => {
       this.el.sceneEl.dispatchEvent(new CustomEvent("camera-set-active"));
@@ -196,11 +169,7 @@ AFRAME.registerComponent("texture-painter", {
 
   onMouseMove: function (evt) {
     evt.preventDefault();
-    var array = this.getMousePosition(
-      this.renderer.domElement,
-      evt.clientX,
-      evt.clientY
-    );
+     var array = this.getMousePosition(this.renderer.domElement, evt.clientX, evt.clientY);
     this.onClickPosition.fromArray(array);
     var intersects = this.getIntersects(this.onClickPosition, [
       this.el.getObject3D("mesh"),
@@ -213,11 +182,7 @@ AFRAME.registerComponent("texture-painter", {
   },
   onMouseDown: function (evt) {
     //evt.preventDefault();
-    var array = this.getMousePosition(
-      this.renderer.domElement,
-      evt.clientX,
-      evt.clientY
-    );
+var array = this.getMousePosition(this.renderer.domElement, evt.clientX , evt.clientY);
     this.onClickPosition.fromArray(array);
     var intersects = this.getIntersects(this.onClickPosition, [
       this.el.getObject3D("mesh"),
@@ -236,57 +201,13 @@ AFRAME.registerComponent("texture-painter", {
     this.lastY = null;
     this.enableLookControls();
   },
-  onTouchMove: function (evt) {
-    evt.preventDefault();
-    var touch = evt.touches[0];
-    var array = this.getMousePosition(
-      this.renderer.domElement,
-      touch.clientX,
-      touch.clientY
-    );
-    this.onClickPosition.fromArray(array);
-    var intersects = this.getIntersects(this.onClickPosition, [
-      this.el.getObject3D("mesh"),
-    ]);
-    if (intersects.length > 0 && intersects[0].uv) {
-      var uv = intersects[0].uv;
-      intersects[0].object.material.map.transformUv(uv);
-      this._draw(uv.x * this._canvas.width, uv.y * this._canvas.height);
-    }
-  },
 
-  onTouchStart: function (evt) {
-    evt.preventDefault();
-    var touch = evt.touches[0];
-    var array = this.getMousePosition(
-      this.renderer.domElement,
-      touch.clientX,
-      touch.clientY
-    );
-    this.onClickPosition.fromArray(array);
-    var intersects = this.getIntersects(this.onClickPosition, [
-      this.el.getObject3D("mesh"),
-    ]);
-    if (intersects.length > 0 && intersects[0].uv) {
-      this.disableLookControls();
-      var uv = intersects[0].uv;
-      intersects[0].object.material.map.transformUv(uv);
-      this.lastX = uv.x * this._canvas.width;
-      this.lastY = uv.y * this._canvas.height;
-    }
-  },
 
-  onTouchEnd: function (evt) {
-    evt.preventDefault();
-    this.lastX = null;
-    this.lastY = null;
-    this.enableLookControls();
-  },
+   getMousePosition: function (dom, x, y) {
+        var rect = this.renderer.domElement.getBoundingClientRect();
+        return [(x - rect.left) / rect.width, (y - rect.top) / rect.height];
 
-  getMousePosition: function (dom, x, y) {
-    var rect = this.renderer.domElement.getBoundingClientRect();
-    return [(x - rect.left) / rect.width, (y - rect.top) / rect.height];
-  },
+    },
   getIntersects: function (point, objects) {
     if (!this.camera || !this.camera.isPerspectiveCamera) {
       return [];
