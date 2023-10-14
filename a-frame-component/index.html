@@ -1,0 +1,16 @@
+<html>
+    <head>
+    <title>Handwriting Recognition in VR: A-Frame Demo</title>
+    <script src='https://aframe.io/releases/1.4.2/aframe.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+</head>
+    <body>
+        <a-scene>
+           <a-plane handwriting-recognition texture-painter id="drawingArea" class="clickable" position="0 1.5 -4" rotation="0 0 0" width="5" height="4"></a-plane>
+           <a-entity cursor="rayOrigin: mouse" raycaster="objects: .clickable;"></a-entity>
+           <a-entity  button-listener class="controller" laser-controls="hand: left" raycaster="objects: .clickable;" line="color: #000000"> 
+           <a-sky color='#ECECEC'></a-sky>
+        </a-scene>
+        <script src="handwriting-recognition.js"></script>
+    </body>
+</html>
