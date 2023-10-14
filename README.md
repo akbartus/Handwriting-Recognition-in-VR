@@ -44,6 +44,7 @@ To use A-Frame component, please make sure to attach the following to <a-plane> 
 ```
 <b>Please note:</b> This A-Frame component is attached after a-scene element.
 <b>Please note:</b> A-Frame implementation and component also supports Quest 2 buttons: <b>button X - recognize, button Y - clear.</b>
+<b>Please note:</b> A-Frame component does not have recognize and clear buttons for mouse clicks. It only supports VR mode with controllers.
 
 ### **TFJS models**
 The repo has the following Tensorflow.js models, which are tiny and robust enough to be run on mobile devices (and therefore very suitable for web experiences):
