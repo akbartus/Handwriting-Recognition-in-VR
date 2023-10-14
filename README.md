@@ -14,7 +14,8 @@ Handwritten text recognition in this repository combines machine learning, compu
 It should be noted that this handwriting recognition can be used to create new game mechanics. For example: 
 * In-game or in-application handwriting based challenge or level.
 * Language learning experiences.
-* Quizzes, etc.
+* Quizzes.
+* Others?
 
 ### **Instructions**
 The repository contains the following: 
