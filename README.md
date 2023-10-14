@@ -43,7 +43,9 @@ To use A-Frame component, please make sure to attach the following to <a-plane> 
 </html>
 ```
 <b>Please note:</b> This A-Frame component is attached after a-scene element.
+
 <b>Please note:</b> A-Frame implementation and component also supports Quest 2 buttons: <b>button X - recognize, button Y - clear.</b>
+
 <b>Please note:</b> A-Frame component does not have recognize and clear buttons for mouse clicks. It only supports VR mode with controllers.
 
 ### **TFJS models**
