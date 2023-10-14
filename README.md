@@ -25,5 +25,6 @@ Handwritten text recognition is powered by AFrame, Three.js and OpenCV.js and Te
 
 ### **Demo**
 The repository contains the following implementations/demos:
-* <a href="https://handwriting-simple.glitch.me/">A-Frame implementation</a>.
+* <a href="https://handwriting-vr.glitch.me/">A-Frame implementation</a>.
 * <a href="https://handwriting-component.glitch.me/">A-Frame component</a>.
+* <a href="https://handwriting-simple.glitch.me/">Simple html demo</a>.
