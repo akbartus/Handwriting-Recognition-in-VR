@@ -43,7 +43,7 @@ The repo has the following Tensorflow.js models:
 * Only letters models (16-bit and 32-bit floating-point types; see: "other-tfjs-models" folder).
 
 ### **UPDATES**
-* Adding another language model.
+It is definitely possible to add other language models and therefore do handwriting recognition in that language. Soon will add new language model. In addition, will be providing small tutorial on how to train own model.
 
 ### **Tech Stack**
 Handwritten text recognition is powered by AFrame, Three.js and OpenCV.js and Tensorflow.js. To learn more about OpenCV.js and its various uses, please refer to another repository: https://github.com/akbartus/OpenCV-Examples-in-JavaScript.    
