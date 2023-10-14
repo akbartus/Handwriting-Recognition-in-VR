@@ -16,6 +16,12 @@ The repository contains the following:
 * Component for A-Frame (see: "a-frame-component" folder). It does not contain the last natural language processing (NLP) step.
 * Simple html implementation (see "simple-implementation" folder). It contains all steps as indicated above.
 
+To use A-Frame component, attach  
+
+### **TFJS models**
+The repo has the following Tensorflow.js models:
+* Alphanumeric model (used in all examples).
+* Only letters models (16-bit and 32-bit floating-point types).
 
 ### **UPDATES**
 * Adding another language model.
