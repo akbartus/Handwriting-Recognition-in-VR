@@ -51,13 +51,15 @@ To use A-Frame component, please make sure to attach the following to <a-plane> 
 ### **TFJS models**
 The repo has the following Tensorflow.js models, which are tiny and robust enough to be run on mobile devices (and therefore very suitable for web experiences):
 * Alphanumeric model (used in all examples).
-* Only letters models (16-bit and 32-bit floating-point types; see: "other-tfjs-models" folder).
+* Only letters models (16-bit and 32-bit floating-point types; see: "misc" folder).
 
 ### **Updates**
 It is definitely possible to add other language models and therefore do handwriting recognition in that language. Soon will add new language model. In addition, will be providing small tutorial on how to train own model.
 
 ### **Tech Stack**
-Handwritten text recognition is powered by AFrame, Three.js and OpenCV.js and Tensorflow.js. To learn more about OpenCV.js and its various uses, please refer to another repository: https://github.com/akbartus/OpenCV-Examples-in-JavaScript.    
+Handwritten text recognition is powered by AFrame, Three.js and OpenCV.js and Tensorflow.js. It also uses updated/modified <a href="https://github.com/marlon360/whiteboard-vr">texture painter component</a>, which is part of Whiteboard VR by Marlon Lückert.  
+
+To learn more about OpenCV.js and its various uses, please refer to another repository: https://github.com/akbartus/OpenCV-Examples-in-JavaScript.    
 
 ### **Demo**
 The repository contains the following implementations/demos:
