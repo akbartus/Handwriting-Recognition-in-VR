@@ -21,7 +21,7 @@ To use A-Frame component, attach
 ### **TFJS models**
 The repo has the following Tensorflow.js models:
 * Alphanumeric model (used in all examples).
-* Only letters models (16-bit and 32-bit floating-point types).
+* Only letters models (16-bit and 32-bit floating-point types; see: "other-models" folder).
 
 ### **UPDATES**
 * Adding another language model.
