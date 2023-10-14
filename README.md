@@ -2,13 +2,19 @@
 <img src="img/screenshot.gif" title="screen capture" alt="screen capture" width="250" style="text-align: center">
 
 ### **Description / Rationale**
-This repository contains various implementations of handwritten text recognition for web virtual reality. The repository was created to demonstrate the possibility of doing handwritten text recognition in web virtual reality without any server or backend.
+This repository contains various implementations of handwritten text recognition for web virtual reality. The repository was created to demonstrate the possibility of doing handwritten text recognition in web virtual reality without any server or backend. 
 
 Handwritten text recognition in this repository combines machine learning, computer vision and NLP. Briefly how everything works: 
 1. Segmentation is doen using OpenCV.js, i.e. bounding box of each element based on contour in an image is calculated, then segmented and placed based on distance between bounding box x position (top left) and left corner of image. It results in several segmentations based on the total number of characters.
 2. Segmentation is then passed over to Tensorflow ML model (image segmentation task), imported and adapted from Keras model, which identifies to which class each segmented image corresponds.
 3. The text string is generated and passed over to words base, which analyzes it for correspondence and divides into meaningful words.
 4. At the end the text is displayed.
+
+### **Uses**
+It should be noted that this handwriting recognition can be used to create new game mechanics. For example: 
+* In-game or in-application handwriting based challenge or level.
+* Language learning experiences.
+* Quizzes, etc.
 
 ### **Instructions**
 The repository contains the following: 
@@ -38,11 +44,11 @@ To use A-Frame component, please make sure to attach the following to <a-plane> 
 <b>Please note:</b> that this A-Frame component is attached after a-scene loads.
 
 ### **TFJS models**
-The repo has the following Tensorflow.js models:
+The repo has the following Tensorflow.js models, which are tiny and robust enough to be run on mobile devices (and therefore very suitable for web experiences):
 * Alphanumeric model (used in all examples).
 * Only letters models (16-bit and 32-bit floating-point types; see: "other-tfjs-models" folder).
 
-### **UPDATES**
+### **Updates**
 It is definitely possible to add other language models and therefore do handwriting recognition in that language. Soon will add new language model. In addition, will be providing small tutorial on how to train own model.
 
 ### **Tech Stack**
