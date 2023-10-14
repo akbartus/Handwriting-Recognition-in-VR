@@ -16,12 +16,31 @@ The repository contains the following:
 * Component for A-Frame (see: "a-frame-component" folder). It does not contain the last natural language processing (NLP) step.
 * Simple html implementation (see "simple-implementation" folder). It contains all steps as indicated above.
 
-To use A-Frame component, attach  
+To use A-Frame component, please make sure to attach the following to <a-plane> element: <b>handwriting-recognition texture-painter id="drawingArea" class="clickable"</b>. Below sample code is provided:
+```
+<html>
+    <head>
+    <title>Handwriting Recognition in VR: A-Frame Demo</title>
+    <script src='https://aframe.io/releases/1.4.2/aframe.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+</head>
+    <body>
+        <a-scene>
+           <a-plane handwriting-recognition texture-painter id="drawingArea" class="clickable" position="0 1.5 -4" rotation="0 0 0" width="5" height="4"></a-plane>
+           <a-entity cursor="rayOrigin: mouse" raycaster="objects: .clickable;"></a-entity>
+           <a-entity  button-listener class="controller" laser-controls="hand: left" raycaster="objects: .clickable;" line="color: #000000"> 
+           <a-sky color='#ECECEC'></a-sky>
+        </a-scene>
+        <script src="handwriting-recognition.js"></script>
+    </body>
+</html>
+```
+<b>Please note:</b> that this A-Frame component is attached after a-scene loads.
 
 ### **TFJS models**
 The repo has the following Tensorflow.js models:
 * Alphanumeric model (used in all examples).
-* Only letters models (16-bit and 32-bit floating-point types; see: "other-models" folder).
+* Only letters models (16-bit and 32-bit floating-point types; see: "other-tfjs-models" folder).
 
 ### **UPDATES**
 * Adding another language model.
