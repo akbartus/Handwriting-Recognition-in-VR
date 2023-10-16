@@ -1,5 +1,6 @@
 # Handwriting Recognition in VR
-<img src="img/screenshot.gif" title="screen capture" alt="screen capture" width="250" style="text-align: center">
+https://github.com/akbartus/Handwriting-Recognition-in-VR/assets/54757270/5067c28b-bcde-4aea-83f2-c8dfa61840a3
+
 
 ### **Description / Rationale**
 This repository contains various implementations of handwritten text recognition for web virtual reality. The repository was created to show the possibility of doing handwritten text recognition in web virtual reality environment based on API and without API or any server (only front end). I believe the use of handwritten text recognition can greatly enhance the experience and create some unique features. I hope this type of feature will become widely available in the near future.  
