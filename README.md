@@ -2,9 +2,9 @@
 <img src="img/screenshot.gif" title="screen capture" alt="screen capture" width="250" style="text-align: center">
 
 ### **Description / Rationale**
-This repository contains various implementations of handwritten text recognition for web virtual reality. The repository was created to demonstrate the possibility of doing handwritten text recognition in web virtual reality based on API and without API or any server (only front end). 
+This repository contains various implementations of handwritten text recognition for web virtual reality. The repository was created to show the possibility of doing handwritten text recognition in web virtual reality based on API and without API or any server (only front end). 
 
-There are two types of handwritten text recognition, demonstrated in this repository:
+There are two types of handwritten text recognition:
 * Handwritten text recognition based on stroke related data, which uses simple API access to the incredible handwriting recognition of Google IME and generates the results (i.e. API based).
 * Handwritten text recognition based on image analysis, which uses ML image classification model powered by Tensorflow.js (i.e. serverless and without any API).
 
@@ -16,8 +16,12 @@ The second type of handwritten text recognition combines machine learning, compu
 3. The text string is generated and passed over to words base, which analyzes it for correspondence and divides into meaningful words.
 4. At the end the text is displayed.
 
+The second type of handwritten text recognition also has the following Tensorflow.js models, which are tiny and robust enough to be run on mobile devices (and therefore very suitable for web experiences):
+* Alphanumeric model (used in all examples).
+* Only letters models (16-bit and 32-bit floating-point types; see: "serverless" > "misc").
+
 ### **Uses**
-It should be noted that this handwriting recognition can be used to create new game mechanics. For example: 
+It should be noted that this handwriting recognition repository and examples it contains can be used to create new game mechanics. For example: 
 * In-game or in-application handwriting based challenge or level.
 * Language learning experiences.
 * Quizzes.
@@ -53,16 +57,12 @@ To use A-Frame component, please make sure to attach the following to <a-plane> 
 <b>Please note:</b> A-Frame implementation and component also support Quest 2 buttons: <b>button X - recognize, button Y - clear.</b>
 
 
-### **TFJS models**
-The repo has the following Tensorflow.js models, which are tiny and robust enough to be run on mobile devices (and therefore very suitable for web experiences):
-* Alphanumeric model (used in all examples).
-* Only letters models (16-bit and 32-bit floating-point types; see: "misc" folder).
 
 ### **Updates**
-It is definitely possible to add other language models and therefore do handwriting recognition in that language. Soon will add new language model. In addition, will be providing small tutorial on how to train own model.
+It is definitely possible to add other ML language models and therefore do handwriting recognition in that language. Soon will add new language model. In addition, will be providing small tutorial on how to train own model.
 
 ### **Tech Stack**
-Handwritten text recognition is powered by AFrame, Three.js and OpenCV.js and Tensorflow.js. It also uses updated/modified <a href="https://github.com/marlon360/whiteboard-vr">texture painter component</a>, which is part of Whiteboard VR by Marlon Lückert.  
+Handwritten text recognition is powered by AFrame, Three.js and OpenCV.js and Tensorflow.js. It uses updated/modified <a href="https://github.com/marlon360/whiteboard-vr">texture painter component</a>, which is part of Whiteboard VR by Marlon Lückert. It also includes some references to the code written by Chen Yu Ho's <a href="https://github.com/ChenYuHo/handwriting.js">Handwriting.js repository</a> (specifically related to API endpoint use).  
 
 To learn more about OpenCV.js and its various uses, please refer to another repository: https://github.com/akbartus/OpenCV-Examples-in-JavaScript.    
 
