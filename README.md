@@ -2,7 +2,7 @@
 <img src="img/screenshot.gif" title="screen capture" alt="screen capture" width="250" style="text-align: center">
 
 ### **Description / Rationale**
-This repository contains various implementations of handwritten text recognition for web virtual reality. The repository was created to demonstrate the possibility of doing handwritten text recognition in web virtual reality without any server or backend. 
+This repository contains various implementations of handwritten text recognition for web virtual reality. The repository was created to demonstrate the possibility of doing handwritten text recognition in web virtual reality based on API and without APU and any server or backend. 
 
 Handwritten text recognition in this repository combines machine learning, computer vision and NLP. Briefly how everything works: 
 1. Segmentation is doen using OpenCV.js, i.e. bounding box of each element based on contour in an image is calculated, then segmented and placed based on distance between bounding box x position (top left) and left corner of image. It results in several segmentations based on the total number of characters.
