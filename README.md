@@ -2,7 +2,7 @@
 <img src="img/screenshot.gif" title="screen capture" alt="screen capture" width="250" style="text-align: center">
 
 ### **Description / Rationale**
-This repository contains various implementations of handwritten text recognition for web virtual reality. The repository was created to show the possibility of doing handwritten text recognition in web virtual reality based on API and without API or any server (only front end). 
+This repository contains various implementations of handwritten text recognition for web virtual reality. The repository was created to show the possibility of doing handwritten text recognition in web virtual reality environment based on API and without API or any server (only front end). I believe the use of handwritten text recognition can greatly enhance the experience and create some unique features. I hope this type of feature will become widely available in the near future.  
 
 There are two types of handwritten text recognition:
 * <b>Handwritten text recognition based on stroke related data</b>, which uses simple API access to the incredible handwriting recognition of Google IME and generates the results (i.e. API based).
