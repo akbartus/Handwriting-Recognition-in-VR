@@ -33,7 +33,7 @@ The repository contains the following:
 * Component for A-Frame (see: "serverless" > "a-frame-component" folder). It does not contain the last natural language processing (NLP) step (dividing into meaningful words).
 * Simple html implementation (see "serverless" > "simple-implementation" folder). It contains the last natural language processing (NLP) step (dividing into meaningful words).
 
-To use A-Frame component (serveless ML based one), please make sure to attach the following to <a-plane> element: <b>handwriting-recognition texture-painter id="drawingArea" class="clickable"</b>. Below sample code is provided:
+<b>To use A-Frame component (serveless one)</b>, please make sure to attach the following to <a-plane> element: <b>handwriting-recognition texture-painter id="drawingArea" class="clickable"</b>. Below sample code is provided:
 ```
 <html>
     <head>
