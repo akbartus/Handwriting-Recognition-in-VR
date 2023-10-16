@@ -1,5 +1,6 @@
 # Handwriting Recognition in VR
-https://github.com/akbartus/Handwriting-Recognition-in-VR/assets/54757270/5067c28b-bcde-4aea-83f2-c8dfa61840a3
+<img src="[https://user-images.githubusercontent.com/16434638/125166121-088f0e80-e192-11eb-8210-7245b1fe4f62.mp4](https://github.com/akbartus/Handwriting-Recognition-in-VR/assets/54757270/5067c28b-bcde-4aea-83f2-c8dfa61840a3)" width="200">
+
 
 
 ### **Description / Rationale**
