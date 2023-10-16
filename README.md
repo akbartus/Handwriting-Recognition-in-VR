@@ -72,4 +72,4 @@ The repository contains the following implementations/demos:
   - <a href="https://handwriting-component.glitch.me/">A-Frame component</a>.
   - <a href="https://handwriting-simple.glitch.me/">Simple html demo</a>.
 * API based:
-  - <a href="https://universal-handwriting.glitch.me/">A-Frame Component</a>.
+
