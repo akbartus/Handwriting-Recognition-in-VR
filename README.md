@@ -5,8 +5,8 @@
 This repository contains various implementations of handwritten text recognition for web virtual reality. The repository was created to show the possibility of doing handwritten text recognition in web virtual reality based on API and without API or any server (only front end). 
 
 There are two types of handwritten text recognition:
-* Handwritten text recognition based on stroke related data, which uses simple API access to the incredible handwriting recognition of Google IME and generates the results (i.e. API based).
-* Handwritten text recognition based on image analysis, which uses ML image classification model powered by Tensorflow.js (i.e. serverless and without any API).
+* <b>Handwritten text recognition based on stroke related data</b>, which uses simple API access to the incredible handwriting recognition of Google IME and generates the results (i.e. API based).
+* <b>Handwritten text recognition based on image analysis</b>, which uses ML image classification model powered by Tensorflow.js (i.e. serverless and without any API).
 
 The first type of handwritten text recognition allows to do the recognition of text in the majority of languages of the world (see: https://www.google.com/inputtools/help/languages.html). 
  
