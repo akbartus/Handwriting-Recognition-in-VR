@@ -20,19 +20,12 @@ The second type of handwritten text recognition also has the following Tensorflo
 * Alphanumeric model (used in all examples).
 * Only letters models (16-bit and 32-bit floating-point types; see: "serverless" > "misc").
 
-### **Uses**
-It should be noted that this handwriting recognition repository and examples it contains can be used to create new game mechanics. For example: 
-* In-game or in-application handwriting based challenge or level.
-* Language learning experiences.
-* Quizzes.
-* Others?
-
 ### **Instructions**
 The repository contains the following: 
 * A-Frame based implementation (see: "serverless" > "a-frame-implementation" folder). It contains the last natural language processing (NLP) step (dividing into meaningful words).
 * Component for A-Frame (see: "serverless" > "a-frame-component" folder). It does not contain the last natural language processing (NLP) step (dividing into meaningful words).
 * Simple html implementation (see "serverless" > "simple-implementation" folder). It contains the last natural language processing (NLP) step (dividing into meaningful words).
-* A-Frame component with Google IME API (see "API" > "a-frame-component" folder). 
+* A-Frame component with Google IME API (see "api" > "a-frame-component" folder). 
 
 <b>To use A-Frame component (serveless one)</b>, please make sure to attach the following to <a-plane> element: <b>handwriting-recognition texture-painter id="drawingArea" class="clickable"</b>. Below sample code is provided:
 ```
@@ -153,7 +146,7 @@ The following is a list of language codes, which can be used with A-Frame compon
 It is definitely possible to add other ML language models and therefore do handwriting recognition in that language. Soon will add new language model. In addition, will be providing small tutorial on how to train own model.
 
 ### **Tech Stack**
-Handwritten text recognition is powered by AFrame, Three.js and OpenCV.js and Tensorflow.js. It uses updated/modified <a href="https://github.com/marlon360/whiteboard-vr">texture painter component</a>, which is part of Whiteboard VR by Marlon Lückert. The code related to API was developed based on the example provided in Chen Yu Ho's <a href="https://github.com/ChenYuHo/handwriting.js">Handwriting.js repository</a>, and Amit Agarwal's blog post <a href="https://www.labnol.org/code/19205-google-handwriting-api">"Google Handwriting IME API Request"</a>.  
+Handwritten text recognition is powered by AFrame, Three.js and OpenCV.js and Tensorflow.js. It uses updated/modified <a href="https://github.com/marlon360/whiteboard-vr">texture painter component</a>, which is part of Whiteboard VR by Marlon Lückert. The code related to API was developed based on the example provided in Chen Yu Ho's <a href="https://github.com/ChenYuHo/handwriting.js">Handwriting.js repository</a>, and Amit Agarwal's blog post <a href="https://www.labnol.org/code/19205-google-handwriting-api">"Google Handwriting IME API Request"</a>. It should be noted though there is very little information on the use of this IME API!   
 
 To learn more about OpenCV.js and its various uses, please refer to: https://github.com/akbartus/OpenCV-Examples-in-JavaScript.
 To see another creative use of drawing in web VR, please refer to: https://github.com/akbartus/VR-Doodle-Painter.  
