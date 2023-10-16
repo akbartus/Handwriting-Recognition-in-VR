@@ -2,9 +2,13 @@
 <img src="img/screenshot.gif" title="screen capture" alt="screen capture" width="250" style="text-align: center">
 
 ### **Description / Rationale**
-This repository contains various implementations of handwritten text recognition for web virtual reality. The repository was created to demonstrate the possibility of doing handwritten text recognition in web virtual reality based on API and without APU and any server or backend. 
+This repository contains various implementations of handwritten text recognition for web virtual reality. The repository was created to demonstrate the possibility of doing handwritten text recognition in web virtual reality based on API and without API or any server (only front end). 
 
-Handwritten text recognition in this repository combines machine learning, computer vision and NLP. Briefly how everything works: 
+There are two types of handwritten text recognition, demonstrated in this repository:
+* Handwritten text recognition based on stroke related data, which uses simple API access to the incredible handwriting recognition of Google IME and generates the results (i.e. API based).
+* Handwritten text recognition based on image analysis, which uses ML image classification model powered by Tensorflow.js (i.e. serverless and without any API).
+ 
+The second type of handwritten text recognition combines machine learning, computer vision and NLP. Here is briefly how everything works: 
 1. Segmentation is doen using OpenCV.js, i.e. bounding box of each element based on contour in an image is calculated, then segmented and placed based on distance between bounding box x position (top left) and left corner of image. It results in several segmentations based on the total number of characters.
 2. Segmentation is then passed over to Tensorflow ML model (image segmentation task), imported and adapted from Keras model, which identifies to which class each segmented image corresponds.
 3. The text string is generated and passed over to words base, which analyzes it for correspondence and divides into meaningful words.
