@@ -32,6 +32,7 @@ The repository contains the following:
 * A-Frame based implementation (see: "serverless" > "a-frame-implementation" folder). It contains the last natural language processing (NLP) step (dividing into meaningful words).
 * Component for A-Frame (see: "serverless" > "a-frame-component" folder). It does not contain the last natural language processing (NLP) step (dividing into meaningful words).
 * Simple html implementation (see "serverless" > "simple-implementation" folder). It contains the last natural language processing (NLP) step (dividing into meaningful words).
+* A-Frame component with Google IME API (see "API" > "a-frame-component" folder). 
 
 <b>To use A-Frame component (serveless one)</b>, please make sure to attach the following to <a-plane> element: <b>handwriting-recognition texture-painter id="drawingArea" class="clickable"</b>. Below sample code is provided:
 ```
