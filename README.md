@@ -8,7 +8,7 @@ There are two types of handwritten text recognition:
 * <b>Handwritten text recognition based on stroke related data</b>, which uses simple API access to the incredible handwriting recognition of Google IME and generates the results (i.e. API based).
 * <b>Handwritten text recognition based on image analysis</b>, which uses ML image classification model powered by Tensorflow.js (i.e. serverless and without any API).
 
-The first type of handwritten text recognition allows to do the recognition of text, using Google IME API, of the majority of languages of the world (see: https://www.google.com/inputtools/help/languages.html). Notably, this API is used for doing handwritten text conversion on Android Devices (https://support.google.com/gboard/answer/9108773?hl=en&co=GENIE.Platform%3DAndroid).  
+The first type of handwritten text recognition allows to do the recognition of text, using Google IME API, of the majority of languages of the world (see the list of languages supported: https://www.google.com/inputtools/help/languages.html). Notably, this API is used for doing handwritten text conversion on Android Devices (https://support.google.com/gboard/answer/9108773?hl=en&co=GENIE.Platform%3DAndroid).  
  
 The second type of handwritten text recognition combines machine learning, computer vision and NLP and only recognizes English letters (A-z) and digits (0-9). Here is briefly how everything works in it: 
 1. Segmentation is doen using OpenCV.js, i.e. bounding box of each element based on contour in an image is calculated, then segmented and placed based on distance between bounding box x position (top left) and left corner of image. It results in several segmentations based on the total number of characters.
@@ -55,6 +55,61 @@ The repository contains the following:
 <b>Please note:</b> This A-Frame component is attached after a-scene element. It does not have recognize and clear buttons for mouse clicks. It only supports VR mode with controllers. A-Frame implementation and component also support Quest 2 buttons: <b>button X - recognize, button Y - clear.</b>
 
 
+### **Language Codes**
+The following provides a list of language codes, which can be used with A-Frame component using Google IME API:
+| Language              | code  |
+|-----------------------|-------|
+| Afrikaans             | af    |
+| Albanian              | sq    |
+| Basque                | eu    |
+| Belarusian            | be    |
+| Bulgarian             | bg    |
+| Catalan               | ca    |
+| Chinese (Simplified)  | zh_CN |
+| Chinese (Traditional) | zh_TW |
+| Croatian              | hr    |
+| Czech                 | cs    |
+| Danish                | da    |
+| Dutch                 | nl    |
+| English               | en    |
+| Estonian              | et    |
+| Filipino              | fil   |
+| Finnish               | fi    |
+| French                | fr    |
+| Galician              | gl    |
+| German                | de    |
+| Greek                 | el    |
+| Haitian               | ht    |
+| Hindi                 | hi    |
+| Hungarian             | hu    |
+| Icelandic             | is    |
+| Indonesian            | id    |
+| Irish                 | ga    |
+| Italian               | it    |
+| Japanese              | ja    |
+| Korean                | ko    |
+| Latin                 | la    |
+| Latvian               | lv    |
+| Lithuanian            | lt    |
+| Macedonian            | mk    |
+| Malay                 | ms    |
+| Norwegian             | no    |
+| Polish                | pl    |
+| Portuguese (Brazil)   | pt_BR |
+| Portuguese (Portugal) | pt_PT |
+| Romanian              | ro    |
+| Russian               | ru    |
+| Serbian               | sr    |
+| Slovak                | sk    |
+| Slovenian             | sl    |
+| Spanish               | es    |
+| Swahili               | sw    |
+| Swedish               | sv    |
+| Thai                  | th    |
+| Turkish               | tr    |
+| Ukranian              | yk    |
+| Vietnamese            | vi    |
+| Welsh                 | cy    |
 
 ### **Updates**
 It is definitely possible to add other ML language models and therefore do handwriting recognition in that language. Soon will add new language model. In addition, will be providing small tutorial on how to train own model.
