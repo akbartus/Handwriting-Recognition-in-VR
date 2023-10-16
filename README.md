@@ -84,6 +84,13 @@ The repository contains the following:
 </body>
 </html>
 ```
+It has the following attributes/schemas:
+* color: { type: "color", default: "black" } - Color of stroke.
+* size: { type: "int", default: 20 } - Size of stroke
+* background: { type: "color", default: "white" } - Plane background color. 
+* clearAll: { type: "boolean", default: false } - Whether clearAll is enabled.
+* language: { type: "string", default: "en"} = Language in which handwrtitten text should be recognized.
+
 <b>Please note:</b> In this example we are using troika text component, which allows to show text in other languages.
 
 ### **Language Codes**
