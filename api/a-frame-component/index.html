@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Handwriting Recognition in VR: A-Frame Component with API</title>
+    <script src='https://aframe.io/releases/1.4.2/aframe.min.js'></script>
+    <script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-plane id="drawingArea" class="clickable" handwriting-recognition-api position="0 1.5 -5" rotation="0 0 0" width="5" height="4"></a-plane>
+        
+        <a-entity id="outputText" position="0 0.2 -4" geometry="primitive: plane; width: 3.6; height: 0.3"
+        troika-text="value: Console" material="color: blue"></a-entity>
+        <a-entity id="send" troika-text="value: Send" position="-2.5 0.2 -4" class="clickable" geometry="primitive: plane; height: 0.3" material="color: black">
+        </a-entity>
+        <a-entity id="clear" troika-text="value: Clear" position="2.5 0.2 -4" class="clickable" geometry="primitive: plane; height: 0.3" material="color: black">
+        </a-entity>
+       
+        <a-entity cursor="rayOrigin: mouse" raycaster="objects: .clickable;"></a-entity>
+        <a-entity  class="controller" laser-controls="hand: left" raycaster="objects: .clickable;" line="color: #000000"></a-entity> 
+        <a-sky color="#ECECEC" rotation="0 -90 0"></a-sky>
+    </a-scene>
+    <script src='handwriting-recognition-api.js'></script>
+
+</body>
+
+</html>
