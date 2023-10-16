@@ -29,11 +29,11 @@ It should be noted that this handwriting recognition repository and examples it 
 
 ### **Instructions**
 The repository contains the following: 
-* A-Frame based implementation (see "a-frame-implementation" folder). It contains all steps as indicated above.
-* Component for A-Frame (see: "a-frame-component" folder). It does not contain the last natural language processing (NLP) step.
-* Simple html implementation (see "simple-implementation" folder). It contains all steps as indicated above.
+* A-Frame based implementation (see: "serverless" > "a-frame-implementation" folder). It contains the last natural language processing (NLP) step (dividing into meaningful words).
+* Component for A-Frame (see: "serverless" > "a-frame-component" folder). It does not contain the last natural language processing (NLP) step (dividing into meaningful words).
+* Simple html implementation (see "serverless" > "simple-implementation" folder). It contains the last natural language processing (NLP) step (dividing into meaningful words).
 
-To use A-Frame component, please make sure to attach the following to <a-plane> element: <b>handwriting-recognition texture-painter id="drawingArea" class="clickable"</b>. Below sample code is provided:
+To use A-Frame component (serveless ML based one), please make sure to attach the following to <a-plane> element: <b>handwriting-recognition texture-painter id="drawingArea" class="clickable"</b>. Below sample code is provided:
 ```
 <html>
     <head>
@@ -52,9 +52,7 @@ To use A-Frame component, please make sure to attach the following to <a-plane> 
     </body>
 </html>
 ```
-<b>Please note:</b> This A-Frame component is attached after a-scene element. It does not have recognize and clear buttons for mouse clicks. It only supports VR mode with controllers.
-
-<b>Please note:</b> A-Frame implementation and component also support Quest 2 buttons: <b>button X - recognize, button Y - clear.</b>
+<b>Please note:</b> This A-Frame component is attached after a-scene element. It does not have recognize and clear buttons for mouse clicks. It only supports VR mode with controllers. A-Frame implementation and component also support Quest 2 buttons: <b>button X - recognize, button Y - clear.</b>
 
 
 
@@ -68,6 +66,7 @@ To learn more about OpenCV.js and its various uses, please refer to another repo
 
 ### **Demo**
 The repository contains the following implementations/demos:
-* <a href="https://handwriting-vr.glitch.me/">A-Frame implementation</a>.
-* <a href="https://handwriting-component.glitch.me/">A-Frame component</a>.
-* <a href="https://handwriting-simple.glitch.me/">Simple html demo</a>.
+* Serverless:
+  - <a href="https://handwriting-vr.glitch.me/">A-Frame implementation</a>.
+  - <a href="https://handwriting-component.glitch.me/">A-Frame component</a>.
+  - <a href="https://handwriting-simple.glitch.me/">Simple html demo</a>.
