@@ -55,6 +55,36 @@ The repository contains the following:
 ```
 <b>Please note:</b> This A-Frame component is attached after a-scene element. It does not have recognize and clear buttons for mouse clicks. It only supports VR mode with controllers. A-Frame implementation and component also support Quest 2 buttons: <b>button X - recognize, button Y - clear.</b>
 
+<b>Sample usage of A-Frame component (with API)</b> is provided below:
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Handwriting Recognition in VR: A-Frame Component with API</title>
+    <script src='https://aframe.io/releases/1.4.2/aframe.min.js'></script>
+    <script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-plane id="drawingArea" class="clickable" handwriting-recognition-api position="0 1.5 -5" rotation="0 0 0" width="5" height="4"></a-plane>
+        
+        <a-entity id="outputText" position="0 0.2 -4" geometry="primitive: plane; width: 3.6; height: 0.3"
+        troika-text="value: Console" material="color: blue"></a-entity>
+        <a-entity id="send" troika-text="value: Send" position="-2.5 0.2 -4" class="clickable" geometry="primitive: plane; height: 0.3" material="color: black">
+        </a-entity>
+        <a-entity id="clear" troika-text="value: Clear" position="2.5 0.2 -4" class="clickable" geometry="primitive: plane; height: 0.3" material="color: black">
+        </a-entity>
+       
+        <a-entity cursor="rayOrigin: mouse" raycaster="objects: .clickable;"></a-entity>
+        <a-entity  class="controller" laser-controls="hand: left" raycaster="objects: .clickable;" line="color: #000000"></a-entity> 
+        <a-sky color="#ECECEC" rotation="0 -90 0"></a-sky>
+    </a-scene>
+    <script src='handwriting-recognition-api.js'></script>
+
+</body>
+</html>
+```
+<b>Please note:</b> In this example we are using troika text component, which allows to show text in other languages.
 
 ### **Language Codes**
 The following is a list of language codes, which can be used with A-Frame component using Google IME API:
@@ -125,7 +155,8 @@ To see another creative use of drawing in web VR, please refer to: https://githu
 The repository contains the following implementations/demos:
 * Serverless:
   - <a href="https://handwriting-vr.glitch.me/">A-Frame implementation</a>.
-  - <a href="https://handwriting-component.glitch.me/">A-Frame component</a>.
+  - <a href="https://handwriting-component.glitch.me/">A-Frame component, serveless</a>.
   - <a href="https://handwriting-simple.glitch.me/">Simple html demo</a>.
 * API based:
+  - <a href="https://handwriting-api.glitch.me/">A-Frame Component, API</a>.
 
