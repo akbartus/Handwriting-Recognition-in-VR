@@ -7,8 +7,10 @@ This repository contains various implementations of handwritten text recognition
 There are two types of handwritten text recognition, demonstrated in this repository:
 * Handwritten text recognition based on stroke related data, which uses simple API access to the incredible handwriting recognition of Google IME and generates the results (i.e. API based).
 * Handwritten text recognition based on image analysis, which uses ML image classification model powered by Tensorflow.js (i.e. serverless and without any API).
+
+The first type of handwritten text recognition allows to do the recognition of text in the majority of languages of the world (see: https://www.google.com/inputtools/help/languages.html). 
  
-The second type of handwritten text recognition combines machine learning, computer vision and NLP. Here is briefly how everything works: 
+The second type of handwritten text recognition combines machine learning, computer vision and NLP and only recognizes English letters (A-z) and digits (0-9). Here is briefly how everything works in it: 
 1. Segmentation is doen using OpenCV.js, i.e. bounding box of each element based on contour in an image is calculated, then segmented and placed based on distance between bounding box x position (top left) and left corner of image. It results in several segmentations based on the total number of characters.
 2. Segmentation is then passed over to Tensorflow ML model (image segmentation task), imported and adapted from Keras model, which identifies to which class each segmented image corresponds.
 3. The text string is generated and passed over to words base, which analyzes it for correspondence and divides into meaningful words.
