@@ -21,7 +21,7 @@ AFRAME.registerComponent("handwriting-recognition-api", {
       type: "boolean",
       default: false,
     },
-    language: {
+    handwritingLanguage: {
       type: "string",
       default: "en",
     },
@@ -36,7 +36,7 @@ AFRAME.registerComponent("handwriting-recognition-api", {
     this.color = this.data.color;
     this.size = this.data.size;
     this.background = this.data.background;
-    this.language = this.data.language;
+    this.language = this.data.handwritingLanguage;
     this.el.sceneEl.addEventListener(
       "camera-set-active",
       this.cameraSetActive.bind(this)
@@ -303,7 +303,11 @@ AFRAME.registerComponent("handwriting-recognition-api", {
       });
       document.querySelector("#clear").addEventListener("click", () => {
         this.eraseAll();
+        this.trace = [];
+        this.handwritingX = [];
+        this.handwritingY = [];
       });
+
     }
   },
 
@@ -364,7 +368,7 @@ function recognize(trace, language) {
 
         document
           .querySelector("#outputText")
-          .setAttribute("troika-text", `value: ${results}; align: center; width: 3`);
+          .setAttribute("troika-text", `value: ${results}; align: center;`);
       }
     })
     .catch(function (error) {
