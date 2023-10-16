@@ -54,18 +54,21 @@ The repository contains the following:
 <html>
 <head>
     <title>Handwriting Recognition in VR: A-Frame Component with API</title>
-    <script src='https://aframe.io/releases/1.4.2/aframe.min.js'></script>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://aframe.io/releases/1.4.0/aframe.min.js'></script>
     <script src="https://unpkg.com/aframe-troika-text/dist/aframe-troika-text.min.js"></script>
 </head>
 <body>
     <a-scene>
-        <a-plane id="drawingArea" class="clickable" handwriting-recognition-api="language: en" position="0 1.5 -5" rotation="0 0 0" width="5" height="4"></a-plane>
+        <a-plane id="drawingArea" class="clickable" handwriting-recognition-api="handwritingLanguage: de; size: 20" position="0 1.5 -5" rotation="0 0 0" width="5" height="4"></a-plane>
         
-        <a-entity id="outputText" position="0 0.2 -4" geometry="primitive: plane; width: 3.6; height: 0.3"
-        troika-text="value: Console" material="color: blue"></a-entity>
-        <a-entity id="send" troika-text="value: Send" position="-2.5 0.2 -4" class="clickable" geometry="primitive: plane; height: 0.3" material="color: black">
+        <a-entity id="outputText" position="0 0.2 -4" 
+        troika-text="value: Console; color: black"></a-entity>
+        <a-entity id="send" text="value: Send; align: center; width: 3;" position="-2.5 0.2 -4" class="clickable" geometry="primitive: plane; height: 0.3" material="color: black">
         </a-entity>
-        <a-entity id="clear" troika-text="value: Clear" position="2.5 0.2 -4" class="clickable" geometry="primitive: plane; height: 0.3" material="color: black">
+        <a-entity id="clear" text="value: Clear; align: center; width: 3;" position="2.5 0.2 -4" class="clickable" geometry="primitive: plane; height: 0.3" material="color: black">
         </a-entity>
        
         <a-entity cursor="rayOrigin: mouse" raycaster="objects: .clickable;"></a-entity>
@@ -75,6 +78,7 @@ The repository contains the following:
     <script src='handwriting-recognition-api.js'></script>
 
 </body>
+
 </html>
 ```
 It has the following attributes/schemas:
