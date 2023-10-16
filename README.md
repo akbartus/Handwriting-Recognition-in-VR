@@ -59,7 +59,7 @@ The repository contains the following:
 </head>
 <body>
     <a-scene>
-        <a-plane id="drawingArea" class="clickable" handwriting-recognition-api position="0 1.5 -5" rotation="0 0 0" width="5" height="4"></a-plane>
+        <a-plane id="drawingArea" class="clickable" handwriting-recognition-api="language: en" position="0 1.5 -5" rotation="0 0 0" width="5" height="4"></a-plane>
         
         <a-entity id="outputText" position="0 0.2 -4" geometry="primitive: plane; width: 3.6; height: 0.3"
         troika-text="value: Console" material="color: blue"></a-entity>
