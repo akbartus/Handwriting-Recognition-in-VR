@@ -154,6 +154,7 @@ Handwritten text recognition is powered by AFrame, Three.js and OpenCV.js and Te
 
 To learn more about OpenCV.js and its various uses, please refer to: https://github.com/akbartus/OpenCV-Examples-in-JavaScript.
 To see another creative use of drawing in web VR, please refer to: https://github.com/akbartus/VR-Doodle-Painter.  
+To see handsfree handwriting recognition, using similar functionality refer to: https://github.com/akbartus/Web-Based-Touchfree-Handwriting-Recognition 
 
 ### **Demo**
 The repository contains the following implementations/demos:
