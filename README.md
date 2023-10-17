@@ -11,7 +11,7 @@ There are two types of handwritten text recognition:
 The first type of handwritten text recognition allows to do the recognition of text, using Google IME API, of the majority of languages of the world. Notably, this API is used for doing handwritten text conversion on <a href="https://support.google.com/gboard/answer/9108773?hl=en&co=GENIE.Platform%3DAndroid">Android Devices</a>. It is also used as part of INTERPLAY MODE created by Google Creative Lab, which demonstrates <a href="https://experiments.withgoogle.com/interplay-mode/view/">this API usage combined with video</a>.  
  
 The second type of handwritten text recognition combines machine learning, computer vision and NLP and only recognizes English letters (A-z) and digits (0-9). Here is briefly how everything works in it: 
-1. Segmentation is doen using OpenCV.js, i.e. bounding box of each element based on contour in an image is calculated, then segmented and placed based on distance between bounding box x position (top left) and left corner of image. It results in several segmentations based on the total number of characters.
+1. Segmentation is done using OpenCV.js, i.e. bounding box of each element based on contour in an image is calculated, then segmented and placed based on distance between bounding box x position (top left) and left corner of image. It results in several segmentations based on the total number of characters.
 2. Segmentation is then passed over to Tensorflow ML model (image segmentation task), imported and adapted from Keras model, which identifies to which class each segmented image corresponds.
 3. The text string is generated and passed over to words base, which analyzes it for correspondence and divides into meaningful words.
 4. At the end the text is displayed.
